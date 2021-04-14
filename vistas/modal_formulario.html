@@ -1,0 +1,101 @@
+<div class="modal" id="myModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h1 id="titulo-crear" class="titulos">Crear empleado</h1>
+                <h1 id="titulo-actualizar" class="titulos">Actualizar empleado</h1>
+                <h1 id="titulo-eliminar" class="titulos">Eliminar empleado</h1>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+            </div>
+            <header class="container">
+                <article class="alert alert-info">
+                    Los campos con asterisco (*) son obligatorios
+                </article>
+            </header>
+            <section class="container">
+                <form class="mx-4" id="formulario" autocomplete="off">
+                    <div class="row form-group">
+                        <label for="nombre" class="col-md-3 font-weight-bold">Nombre completo *</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control form-control-sm col-md-9" placeholder="Nombre completo del empleado">
+                    </div>
+                    <div class="row form-group">
+                        <label for="email" class="col-md-3 font-weight-bold">Correo electr&oacute;nico *</label>
+                        <input type="email" id="email" name="email" class="form-control form-control-sm col-md-9" placeholder="Correo electr&oacute;nico">
+                    </div>
+                    <div class="row form-group">
+                        <label for="sexo" class="col-md-3 font-weight-bold">Sexo *</label>
+                        <div class="col-md-9" id="tipo_sexo">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="sexo" value="M">Masculino
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="sexo" value="F">Femenino
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="area_id" class="col-md-3 font-weight-bold">&Aacute;rea *</label>
+                        <select class="col-md-9 form-control form-control-sm" id="area_id" name="area_id">
+                            <option value="default">Seleccione un tipo de &aacute;rea...</option>
+                            <option value="1" selected>Administraci&oacute;n</option>
+                            <option value="2">Calidad</option>
+                            <option value="3">Producci&oacute;n</option>
+                            <option value="4">Ventas</option>                    
+                        </select>
+
+
+                    </div>
+                    <div class="row form-group">
+                        <label for="descripcion" class="col-md-3 font-weight-bold">Descripci&oacute;n *</label>
+                        <textarea class="form-control form-control-sm col-md-9" rows="3" id="descripcion" name="descripcion" placeholder="Descripci&oacute;n de la experiencia del empleado" maxlength="255" minlength="1"></textarea>
+                        <!--<input type="email" id="" class="form-control form-control-sm col-md" placeholder="Correo electr&oacute;nico">-->
+                    </div>
+                    <div class="row form-group">
+                        <label for="boletin" class="col-md-3 font-weight-bold"></label>
+                        <div class="col-md-9">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="" id="boletin" name="boletin"> Deseo recibir bolet&iacute;n informativo
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="rol" class="col-md-3 font-weight-bold">Roles *</label>
+                        <div class="col-md-9" id="tipo_rol">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="1" id="profesional" name="roles[]"> Profesional de proyectos – Desarrollo
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="2" id="gerente" name="roles[]"> Gerente estrat&eacute;gico
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="3" id="auxiliar" name="roles[]"> Auxiliar administrativo
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="" class="col-md-3 font-weight-bold"></label>
+                        <div class="col-md-9">
+                            <button type="button" class="acciones btn btn-info" id="guardar">Guardar</button>
+                            <button type="button" class="acciones btn btn-info" data-empleado="" id="actualizar">Actualizar</button>
+                            <button type="button" class="acciones btn btn-info" data-empleado="" id="eliminar">Eliminar</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
